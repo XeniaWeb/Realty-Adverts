@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreListingRequest;
+use App\Http\Requests\UpdateListingRequest;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,8 @@ class ListingController extends Controller
 {
     public function index()
     {
-        $listings = Listing::all();
+        $listings = Listing::get()->sortByDesc('id');
+
         return inertia('Listings/Index', ['listings' => $listings])->with('success', 'That\'s all!');
     }
 
@@ -37,11 +39,15 @@ class ListingController extends Controller
         return inertia('Listings/Edit', ['listing' => $listing]);
     }
 
-    public function update(Request $request, Listing $listing)
+    public function update(UpdateListingRequest $request, Listing $listing)
     {
+        $listing->update($request->validated());
+
+        return redirect()->route('listings.index')->with('success', 'Listing updated successfully!');
     }
 
     public function destroy(Listing $listing)
     {
+        $listing->delete();
     }
 }

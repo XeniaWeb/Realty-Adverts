@@ -2,13 +2,21 @@
 import ListingItem from "@/Components/ListingItem.vue";
 
 defineProps({
-    listing: Object
+  listing: Object
 });
 
 </script>
 
+<script>
+import MainLayout from "@/Layouts/MainLayout.vue";
+
+export default {
+  layout: MainLayout
+}
+</script>
+
 <template>
-    <ListingItem :listing="listing"/>
+  <ListingItem :listing="listing"/>
 </template>
 
 <style scoped>
