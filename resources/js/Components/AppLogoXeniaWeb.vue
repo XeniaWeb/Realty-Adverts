@@ -1,16 +1,19 @@
 <script setup>
 defineProps({
   colorWeb: {
-    default: '#000000'
+    type: String,
+    default: 'current'
   },
   colorXenia: {
+    type: String,
     default: '#ffe100'
   }
 })
 </script>
 
 <template>
-  <svg viewBox="0 0 180 80" xmlns="http://www.w3.org/2000/svg">
+  <svg viewBox="0 0 180 80" xmlns="http://www.w3.org/2000/svg"
+    :class="['fill-current text-gray-900 dark:text-gray-100']">
     <g>
       <path
         v-show="colorWeb"

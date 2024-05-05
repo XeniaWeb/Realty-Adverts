@@ -1,5 +1,8 @@
 <script setup>
 import AppButton from "@/Components/UI/AppButton.vue";
+import DangerButton from "@/Components/DangerButton.vue";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
+import SecondaryButton from "@/Components/SecondaryButton.vue";
 
 defineProps({});
 
@@ -14,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-white dark:bg-stone-800">
+  <div class="">
     <h1 class="heading-2 border-b py-4 mb-6">Buttons</h1>
     <div class="mb-4">
       <h2 class="heading-3 font-light mb-2">Disabled</h2>
@@ -47,6 +50,12 @@ export default {
       <AppButton class="m-2" label="Success" color="success" :outlined="true"/>
       <AppButton class="m-2" label="Warning" color="warning" :outlined="true"/>
       <AppButton class="m-2" label="Info" color="info" :outlined="true"/>
+    </div>
+    <div class="mb-4">
+      <h2 class="heading-3 font-light mb-2">Components</h2>
+      <DangerButton label="DangerButton" />
+      <PrimaryButton label="PrimaryButton" />
+      <SecondaryButton label="SecondaryButton" />
     </div>
   </div>
 </template>

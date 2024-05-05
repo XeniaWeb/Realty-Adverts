@@ -22,10 +22,13 @@
 /* ================== BUTTONS ======================== */
 
 .btn {
-    @apply bg-amber-950 inline-flex justify-center items-center mr-2 mb-2 text-white tracking-widest px-4 py-2 min-w-28 border rounded-md font-semibold focus:outline-none focus:ring-1 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-25 focus:ring-outline
+    @apply bg-amber-950 inline-block text-center mr-2 mb-2 text-white tracking-widest px-4 py-2 min-w-28 border rounded-md font-semibold focus:outline-none focus:ring-1 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-25 focus:ring-outline
 }
 .btn-large {
     @apply py-4 px-6 text-xl
+}
+.btn-small {
+    @apply py-1 px-2 text-base min-w-20
 }
 .btn-primary {
     @apply bg-primary border-primary hover:bg-primary-hover hover:disabled:bg-primary focus:bg-primary-focus active:bg-primary-active active:disabled:bg-primary
@@ -49,7 +52,7 @@
     @apply rounded-3xl
 }
 .btn-outlined {
-    @apply bg-white text-inherit hover:text-white hover:border-transparent focus:bg-white active:bg-white
+    @apply bg-transparent text-inherit hover:text-white hover:border-transparent focus:bg-white active:bg-white
 }
 .color-primary {
     @apply text-primary border-primary hover:bg-primary/80

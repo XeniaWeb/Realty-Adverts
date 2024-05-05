@@ -8,7 +8,11 @@ const props = defineProps({
     type: String,
     default: 'primary'
   },
-  large: {
+  isLarge: {
+    type: Boolean,
+    default: false
+  },
+  isSmall: {
     type: Boolean,
     default: false
   },
@@ -25,7 +29,13 @@ const props = defineProps({
 
 <template>
   <button
-    :class="['btn', `btn-${color}`, {'btn-rounded': rounded}, outlined ? `color-${color} btn-outlined` : '']">
+    :class="['btn',
+      `btn-${color}`,
+      {'btn-rounded': rounded},
+      {'btn-large': isLarge},
+      {'btn-small': isSmall},
+      outlined ? `color-${color} btn-outlined` : ''
+      ]">
     {{ label }}
     <slot/>
   </button>

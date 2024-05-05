@@ -18,6 +18,8 @@ export default {
       },
       colors: {
         transparent: "transparent",
+        "text-light": "#030712",
+        "text-dark": "#d1d5db",
         // primary: "#5540af",
         outline: "#65a30d",
         primary: "#65a30d",

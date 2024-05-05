@@ -1,5 +1,6 @@
 <script setup>
-import ListingItem from "@/Components/ListingItem.vue";
+import ListingItem from "@/Components/ListingAddress.vue";
+import MainLayout from "@/Layouts/MainLayout.vue";
 
 defineProps({
   listing: Object
@@ -7,16 +8,18 @@ defineProps({
 
 </script>
 
-<script>
-import MainLayout from "@/Layouts/MainLayout.vue";
+<!--<script>-->
+<!--import MainLayout from "@/Layouts/MainLayout.vue";-->
 
-export default {
-  layout: MainLayout
-}
-</script>
+<!--export default {-->
+<!--  layout: MainLayout-->
+<!--}-->
+<!--</script>-->
 
 <template>
-  <ListingItem :listing="listing"/>
+  <MainLayout>
+    <ListingItem :listing="listing"/>
+  </MainLayout>
 </template>
 
 <style scoped>

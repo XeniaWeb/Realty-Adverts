@@ -10,8 +10,8 @@ export default {
 }
 </script>
 <template>
-  <div class="bg-white dark:bg-stone-800">
-    <h1 class="heading-2 border-b py-4 mb-6">Typography: Headings</h1>
+  <div>
+    <h1 class="heading-2 py-4 mb-8">Typography: Headings</h1>
     <h2 class="heading-1">Heading h1</h2>
     <h2 class="heading-2">Heading h2</h2>
     <h2 class="heading-3">Heading h3</h2>
