@@ -1,13 +1,21 @@
 <script setup>
-import ListingPrice from "@/Components/ListingPrice.vue";
+import LocalPrice from "@/Components/LocalPrice.vue";
 import ListingAddress from "@/Components/ListingAddress.vue";
 import ListingSpace from "@/Components/ListingSpace.vue";
 import ContentBox from "@/Components/UI/ContentBox.vue";
+import InputLabel from "@/Components/UI/InputLabel.vue";
+import RangeInput from "@/Components/UI/RangeInput.vue";
+import {ref} from "vue";
+import {useMonthlyPayment} from "@/Composables/useMonthlyPayment.js";
 
-defineProps({
+const interestRate = ref(2.5);
+const duration = ref(25);
+
+const props = defineProps({
   listing: Object
 });
 
+const {monthlyPayment} = useMonthlyPayment(props.listing.price, interestRate, duration)
 </script>
 
 <script>
@@ -31,15 +39,41 @@ export default {
         <template #header>
           Base Info
         </template>
-        <ListingPrice :price="listing.price"/>
+        <LocalPrice :price="listing.price"/>
         <ListingSpace :listing="listing"/>
         <ListingAddress :listing="listing" class="mb-6"/>
       </ContentBox>
       <ContentBox>
         <template #header>
-          Offer
+          Monthly payment
         </template>
-        Make offer
+        <div class="">
+          <div class="">
+            <InputLabel for="interestRate">
+              Interest Rate ({{ interestRate }}%)
+            </InputLabel>
+            <RangeInput
+              id="interestRate"
+              v-model.number="interestRate"
+              max="30"
+              step="0.1"
+            />
+          </div>
+          <div class="">
+            <InputLabel for="duration">
+              Duration ({{ duration }} years)
+            </InputLabel>
+            <RangeInput
+              id="duration"
+              v-model.number="duration"
+              max="35"
+            />
+          </div>
+          <div class="text-gray-600 dark:text-gray-300 mt-1">
+            <div class="text-gray-400">Your monthly payment</div>
+            <LocalPrice :price="monthlyPayment"/>
+          </div>
+        </div>
       </ContentBox>
     </div>
   </div>

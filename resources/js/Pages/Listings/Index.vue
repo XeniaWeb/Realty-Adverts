@@ -3,7 +3,7 @@ import {Head, Link} from "@inertiajs/vue3";
 import ListingAddress from "@/Components/ListingAddress.vue";
 import ContentBox from "@/Components/UI/ContentBox.vue";
 import ListingSpace from "@/Components/ListingSpace.vue";
-import ListingPrice from "@/Components/ListingPrice.vue";
+import LocalPrice from "@/Components/LocalPrice.vue";
 
 defineProps({
   listings: Object
@@ -24,7 +24,7 @@ export default {
     <div class="content grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 md:px-2 ">
       <ContentBox v-for="listing in listings" class="" :key="listing.id">
         <Link :href="route('listings.show', listing)">
-          <ListingPrice :price="listing.price"/>
+          <LocalPrice :price="listing.price"/>
           <ListingSpace :listing="listing"/>
           <ListingAddress :listing="listing" class="mb-6"/>
         </Link>
