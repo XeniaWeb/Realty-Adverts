@@ -8,11 +8,11 @@ const props = defineProps({
     type: String,
     default: 'primary'
   },
-  isLarge: {
+  large: {
     type: Boolean,
     default: false
   },
-  isSmall: {
+  small: {
     type: Boolean,
     default: false
   },
@@ -32,8 +32,8 @@ const props = defineProps({
     :class="['btn',
       `btn-${color}`,
       {'btn-rounded': rounded},
-      {'btn-large': isLarge},
-      {'btn-small': isSmall},
+      {'btn-large': large},
+      {'btn-small': small},
       outlined ? `color-${color} btn-outlined` : ''
       ]">
     {{ label }}

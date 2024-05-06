@@ -57,6 +57,12 @@ export default {
       <PrimaryButton label="PrimaryButton" />
       <SecondaryButton label="SecondaryButton" />
     </div>
+    <div class="mb-4">
+      <h2 class="heading-3 font-light mb-2">Large & Small</h2>
+      <AppButton label="Large" large="true"/>
+      <AppButton label="Normal" />
+      <AppButton label="Small" small="true"/>
+    </div>
   </div>
 </template>
 

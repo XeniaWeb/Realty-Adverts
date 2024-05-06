@@ -22,7 +22,7 @@
 /* ================== BUTTONS ======================== */
 
 .btn {
-    @apply bg-amber-950 inline-block text-center mr-2 mb-2 text-white tracking-widest px-4 py-2 min-w-28 border rounded-md font-semibold focus:outline-none focus:ring-1 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-25 focus:ring-outline
+    @apply bg-amber-950 inline-block text-center mr-2 mb-2 text-white text-lg tracking-widest px-4 py-2 min-w-28 border rounded-md font-semibold focus:outline-none focus:ring-1 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-25 focus:ring-outline
 }
 .btn-large {
     @apply py-4 px-6 text-xl
