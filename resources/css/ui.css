@@ -22,7 +22,7 @@
 /* ================== BUTTONS ======================== */
 
 .btn {
-    @apply bg-amber-950 inline-block text-center mr-2 mb-2 text-white text-lg tracking-widest px-4 py-2 min-w-28 border rounded-md font-semibold focus:outline-none focus:ring-1 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-25 focus:ring-outline
+    @apply bg-amber-950 inline-flex items-center justify-center gap-2 text-center mr-2 mb-2 text-white text-lg tracking-wider px-4 py-2 min-w-28 border rounded-md font-semibold focus:outline-none focus:ring-1 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-25 focus:ring-outline
 }
 .btn-large {
     @apply py-4 px-6 text-xl
@@ -53,6 +53,12 @@
 }
 .btn-outlined {
     @apply bg-transparent text-inherit hover:text-white hover:border-transparent focus:bg-white active:bg-white
+}
+.btn-icon {
+    @apply rounded-full p-0 w-10 h-10 min-w-0 inline-flex items-center justify-center
+}
+.btn-icon-large {
+    @apply rounded-full p-0 w-14 h-14 min-w-0 inline-flex items-center justify-center
 }
 .color-primary {
     @apply text-primary border-primary hover:bg-primary/80

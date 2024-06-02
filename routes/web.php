@@ -22,6 +22,7 @@ Route::prefix('ui')->as('ui.')->group(function () {
     Route::get('/', [UiController::class, 'index'])->name('index');
     Route::get('/buttons', [UiController::class, 'buttons'])->name('buttons');
     Route::get('/headings', [UiController::class, 'headings'])->name('headings');
+    Route::get('/tabs', [UiController::class, 'tabs'])->name('tabs');
 });
 
 

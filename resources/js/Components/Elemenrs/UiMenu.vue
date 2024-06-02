@@ -6,9 +6,10 @@ defineProps({});
 </script>
 
 <template>
-  <div class="">
+  <div class="pt-8 sm:pt-4">
     <Link :href="route('ui.buttons')" class="link-item">Buttons</Link>
     <Link :href="route('ui.headings')" class="link-item">Headings</Link>
+    <Link :href="route('ui.tabs')" class="link-item">Tabs</Link>
   </div>
 </template>
 
